@@ -1,21 +1,68 @@
+@import variables
 @import reset
 @import fonts
+@import style
 
+
+
+// Временное расположение стилей, для стилей есть свой файл style.sass
+// По завершению перенести туда все стили
+
+
+// шапка сайта
+
+body
+	font-family: $ff
+	box-sizing: border-box
+header
+	border-bottom: 4px solid #00346a
 .wrapper
 	max-width: 1200px
 	margin: 0 auto
+	padding-left: 10px
+	padding-right: 10px
 
 .navigation
 	background: #ffffff
 	display: flex
 	justify-content: space-between	
-	height: 90px
-
-
+	align-items: center
+	height: 70px
+	
 .menu
 	ul
 		display: flex
 		li
 			color: #0a1c51
 			text-transform: uppercase
+			font: 700 15px/21px $ff-med
+			color: #0a1c51
+			margin-right: 40px
+			transition: all .3s
+			&:hover
+				transform: scale(1.15)
+				text-decoration: underline
+			a 
+				text-decoration: none
+			
+		li:last-child
+			margin-right: 0
+		
+.front-page
+	border-top: 1px solid #55789c
+	background: #181e40 url(../img/main-bg.jpg) no-repeat center top
 
+	height: 855px
+.front-page-alpha
+	background-color: rgba(16, 32, 90, .7)
+	height: 100%
+	width: 100%
+
+.main-title
+	color: #fff //  просто временный цвет
+	display: flex
+	height: 340px
+	justify-content: space-between
+	flex-direction: column
+	margin-left: auto
+	width: 55%
