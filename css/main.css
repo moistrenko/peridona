@@ -95,7 +95,8 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  position: relative; }
 
 .navigation {
   background: #ffffff;
@@ -134,10 +135,7 @@ main {
   background-color: rgba(16, 32, 90, 0.7);
   height: 100%;
   width: 100%;
-  display: flex;
-  align-items: center; }
-  .front-page-alpha .wrapper {
-    position: relative; }
+  padding-top: 260px; }
 
 .main-contact {
   position: absolute;
@@ -145,12 +143,12 @@ main {
   right: -60px;
   display: flex;
   align-items: center; }
-  .main-contact:before {
+  .main-contact::before {
     content: "";
     display: block;
     border-top: 54px solid #fff;
     border-left: 54px solid transparent; }
-  .main-contact:after {
+  .main-contact::after {
     content: "";
     display: block;
     border-top: 54px solid #fff;
@@ -166,7 +164,7 @@ main {
     justify-content: space-around; }
     .main-contact address span {
       color: #131f4f; }
-      .main-contact address span:before {
+      .main-contact address span::before {
         content: "";
         display: inline-block;
         vertical-align: middle;
@@ -178,7 +176,7 @@ main {
     .main-contact address a {
       text-decoration: none;
       color: #131f4f; }
-      .main-contact address a:before {
+      .main-contact address a::before {
         content: "";
         display: inline-block;
         vertical-align: middle;
@@ -187,7 +185,7 @@ main {
         background: url(../img/sprite.png) no-repeat 0 -40px;
         background-size: 60px;
         margin-right: 10px; }
-      .main-contact address a[href^="tel"]:before {
+      .main-contact address a[href^="tel"]::before {
         background-position: -20px -40px; }
 
 .main-title {
@@ -205,6 +203,7 @@ main {
     font-size: 1.5rem;
     line-height: 2.5rem; }
   .main-title .main-title--btn a {
+    z-index: 999;
     display: inline-block;
     font: 500 1.6rem/2.5rem "Rubik Medium", sans-serif;
     color: #fff;
@@ -223,9 +222,71 @@ main {
       font-weight: bold;
       transform: scale(0.9); }
 
+.about-house {
+  z-index: 0;
+  display: flex;
+  align-items: flex-end;
+  margin-left: -45px;
+  position: absolute;
+  bottom: -420px; }
+
+.compain {
+  margin-bottom: 50px;
+  margin-left: -46px;
+  padding: 40px 45px;
+  border-bottom: 7px solid #858da9;
+  box-shadow: 1px 0px 10px -3px rgba(50, 50, 50, 0.75); }
+  .compain img {
+    margin-right: 50px; }
+    .compain img:last-child {
+      margin-right: 0; }
+
+.ubout-us-inner {
+  margin-top: 240px;
+  display: flex; }
+  .ubout-us-inner .ubout-business {
+    width: 50%; }
+    .ubout-us-inner .ubout-business h2 {
+      font: bold 3.6rem/6rem "Rubik bold", sans-serif;
+      color: #082362; }
+    .ubout-us-inner .ubout-business h3 {
+      font: bold 2rem/7rem "Rubik bold", sans-serif;
+      color: #707070; }
+      .ubout-us-inner .ubout-business h3::after {
+        content: "";
+        display: inline-block;
+        width: 113px;
+        height: 3px;
+        background: #082362;
+        margin-left: 10px; }
+    .ubout-us-inner .ubout-business p {
+      color: #707070;
+      font-size: 1.6rem;
+      line-height: 2.6rem;
+      margin-bottom: 25px; }
+      .ubout-us-inner .ubout-business p strong {
+        font-weight: bold; }
+    .ubout-us-inner .ubout-business .stats {
+      display: flex; }
+      .ubout-us-inner .ubout-business .stats div {
+        margin-left: 80px; }
+        .ubout-us-inner .ubout-business .stats div:first-child {
+          margin-left: 0; }
+        .ubout-us-inner .ubout-business .stats div span {
+          display: block; }
+  .ubout-us-inner .feedback {
+    width: 50%; }
+
 @media screen and (max-width: 1350px) {
   .main-contact {
-    right: 5px; } }
+    right: 5px; }
+
+  .about-house {
+    bottom: -250px;
+    left: 50px;
+    zoom: 0.8; }
+    .about-house .compain {
+      background: #fff; } }
 @media screen and (max-width: 1000px) {
   .main-title {
     text-align: center;
@@ -233,6 +294,19 @@ main {
     min-width: 80%; }
     .main-title p {
       margin-top: 20px;
-      margin-bottom: 20px; } }
+      margin-bottom: 20px; }
+
+  .house {
+    display: none; }
+
+  .about-house {
+    margin: 0;
+    padding: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 700px; }
+    .about-house .compain {
+      margin: 0;
+      width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -35,6 +35,7 @@ header
 	margin: 0 auto
 	padding-left: 10px
 	padding-right: 10px
+	position: relative
 
 .navigation
 	background: #ffffff
@@ -75,11 +76,7 @@ main
 	background-color: rgba(16, 32, 90, .7)
 	height: 100%
 	width: 100%
-	display: flex
-	align-items: center
-	.wrapper
-		position: relative
-
+	padding-top: 260px
 
 .main-contact
 	position: absolute
@@ -87,12 +84,12 @@ main
 	right: -60px
 	display: flex
 	align-items: center
-	&:before
+	&::before
 			content: ""
 			display: block
 			border-top: 54px solid #fff
 			border-left: 54px solid transparent
-	&:after
+	&::after
 			content: ""
 			display: block
 			border-top: 54px solid #fff
@@ -109,7 +106,7 @@ main
 		
 		span
 			color: #131f4f
-			&:before
+			&::before
 				content: ""
 				display: inline-block
 				vertical-align: middle
@@ -121,7 +118,7 @@ main
 		a
 			text-decoration: none
 			color: #131f4f
-			&:before
+			&::before
 				content: ""
 				display: inline-block
 				vertical-align: middle
@@ -130,7 +127,7 @@ main
 				background: url(../img/sprite.png) no-repeat 0 -40px
 				background-size: 60px
 				margin-right: 10px
-			&[href^="tel"]:before
+			&[href^="tel"]::before
 				background-position: -20px -40px
 
 .main-title
@@ -149,6 +146,7 @@ main
 		line-height: 2.5rem
 	.main-title--btn
 		a 
+			z-index: 999
 			display: inline-block
 			font: 500 1.6rem/2.5rem $ff-med
 			color: #fff
@@ -169,7 +167,66 @@ main
 
 
 
+.about-house
+	z-index: 0
+	display: flex
+	align-items: flex-end
+	margin-left: -45px
+	position: absolute
+	bottom: -420px
+.compain 
+	margin-bottom: 50px
+	margin-left: -46px
+	padding: 40px 45px
+	border-bottom: 7px solid  #858da9
+	box-shadow: 1px 0px 10px -3px rgba(50, 50, 50, 0.75)
+	img 
+		margin-right: 50px
+		&:last-child
+			margin-right: 0
 
+
+// Вторая секция 
+
+
+.ubout-us-inner
+	margin-top: 240px
+	display: flex
+	.ubout-business
+		width: 50%
+		h2 
+			font: bold 3.6rem/6rem $ff-b
+			color: #082362
+		h3 
+			font: bold 2rem/7rem $ff-b
+			color: #707070
+			&::after
+				content: ""
+				display: inline-block
+				width: 113px
+				height: 3px
+				background: #082362
+				margin-left: 10px
+		p 
+			color: #707070
+			font-size: 1.6rem
+			line-height: 2.6rem
+			margin-bottom: 25px
+			strong
+				font-weight: bold
+
+
+		.stats
+			display: flex
+			div
+				margin-left: 80px
+				&:first-child
+					margin-left: 0
+				span
+					display: block
+
+	.feedback
+		width: 50%
 
 			// Временные медиазапросы, перед публикацией скопировать в соответсвующий файл с медиазпросам
 
@@ -178,11 +235,15 @@ main
 @media screen and (max-width: 1350px)
 	.main-contact
 		right: 5px
+	.about-house
+		bottom: -250px 
+		left: 50px
+		zoom: .8
+		.compain
+			background: #fff
 
 
 @media screen and (max-width: 1000px)
-
-
 	.main-title
 		text-align: center
 		margin: auto
@@ -190,3 +251,17 @@ main
 		p
 			margin-top: 20px
 			margin-bottom: 20px
+	.house
+		display: none
+	.about-house
+		margin: 0
+		padding: 0
+		left: 50%
+		transform: translate(-50%) 
+		width: 700px
+		.compain
+			margin: 0
+			width: 100%
+
+@media screen and (max-width: 720px)
+
