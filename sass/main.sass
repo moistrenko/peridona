@@ -129,8 +129,24 @@ main
 				margin-right: 10px
 			&[href^="tel"]::before
 				background-position: -20px -40px
-
+.about-house
+	display: flex
+	align-items: flex-end
+	margin-left: -45px
+	position: absolute
+	bottom: -420px
+.compain 
+	margin-bottom: 50px
+	margin-left: -46px
+	padding: 40px 45px
+	border-bottom: 7px solid  #858da9
+	box-shadow: 1px 0px 10px -3px rgba(50, 50, 50, 0.75)
+	img 
+		margin-right: 50px
+		&:last-child
+			margin-right: 0
 .main-title
+	z-index: 1000
 	display: flex
 	min-height: 340px
 	justify-content: space-between
@@ -146,7 +162,6 @@ main
 		line-height: 2.5rem
 	.main-title--btn
 		a 
-			z-index: 999
 			display: inline-block
 			font: 500 1.6rem/2.5rem $ff-med
 			color: #fff
@@ -167,23 +182,7 @@ main
 
 
 
-.about-house
-	z-index: 0
-	display: flex
-	align-items: flex-end
-	margin-left: -45px
-	position: absolute
-	bottom: -420px
-.compain 
-	margin-bottom: 50px
-	margin-left: -46px
-	padding: 40px 45px
-	border-bottom: 7px solid  #858da9
-	box-shadow: 1px 0px 10px -3px rgba(50, 50, 50, 0.75)
-	img 
-		margin-right: 50px
-		&:last-child
-			margin-right: 0
+
 
 
 // Вторая секция 
@@ -192,8 +191,10 @@ main
 .ubout-us-inner
 	margin-top: 240px
 	display: flex
+	justify-content: space-around
 	.ubout-business
-		width: 50%
+		width: 49%
+		margin-top: 50px
 		h2 
 			font: bold 3.6rem/6rem $ff-b
 			color: #082362
@@ -214,8 +215,6 @@ main
 			margin-bottom: 25px
 			strong
 				font-weight: bold
-
-
 		.stats
 			display: flex
 			div
@@ -224,9 +223,59 @@ main
 					margin-left: 0
 				span
 					display: block
+					&:first-child
+						font: bold 2.4rem/2.6rem $ff-b
+						color: #082362
+					&:last-child
+						font: 1.6rem/2.6rem
+						color: #6e6e6e
 
-	.feedback
-		width: 50%
+.feedback
+	width: 49%
+	background: #082362
+	padding: 25px 30px
+	color: #fff
+	h2
+		font: bold 3.6rem/6rem $ff-b
+		color: #fff
+		margin-bottom: 18px
+	input:not([type="submit"]),
+	textarea
+		width: 100%
+		padding: 0 30px
+		border: none
+		margin-bottom: 18px
+		font: 1.4rem/6rem  $ff
+		color: #999
+	textarea 
+		resize: none
+		height: 130px
+.send
+	display: inline-block
+	padding: 18px 65px
+	margin: 0
+	font: 500 1.7rem/1.7rem $ff-med
+	color: #082362
+	background: #fff
+	border: none
+	cursor: pointer
+	transition: all .3s
+	&:hover
+		color: $blue
+		background-color: #ddd
+		text-decoration: underline
+		font-weight: bold
+		transform: scale(.9)
+
+
+// 3 секция с видео
+
+
+
+
+
+
+
 
 			// Временные медиазапросы, перед публикацией скопировать в соответсвующий файл с медиазпросам
 
@@ -262,6 +311,12 @@ main
 		.compain
 			margin: 0
 			width: 100%
+	.ubout-us-inner
+		flex-direction: column
+		align-items: center
+		margin-top: 0
+		.feedback 
+			margin-top: 50px
 
 @media screen and (max-width: 720px)
 

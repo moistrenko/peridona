@@ -188,7 +188,26 @@ main {
       .main-contact address a[href^="tel"]::before {
         background-position: -20px -40px; }
 
+.about-house {
+  display: flex;
+  align-items: flex-end;
+  margin-left: -45px;
+  position: absolute;
+  bottom: -420px; }
+
+.compain {
+  margin-bottom: 50px;
+  margin-left: -46px;
+  padding: 40px 45px;
+  border-bottom: 7px solid #858da9;
+  box-shadow: 1px 0px 10px -3px rgba(50, 50, 50, 0.75); }
+  .compain img {
+    margin-right: 50px; }
+    .compain img:last-child {
+      margin-right: 0; }
+
 .main-title {
+  z-index: 1000;
   display: flex;
   min-height: 340px;
   justify-content: space-between;
@@ -203,7 +222,6 @@ main {
     font-size: 1.5rem;
     line-height: 2.5rem; }
   .main-title .main-title--btn a {
-    z-index: 999;
     display: inline-block;
     font: 500 1.6rem/2.5rem "Rubik Medium", sans-serif;
     color: #fff;
@@ -222,30 +240,13 @@ main {
       font-weight: bold;
       transform: scale(0.9); }
 
-.about-house {
-  z-index: 0;
-  display: flex;
-  align-items: flex-end;
-  margin-left: -45px;
-  position: absolute;
-  bottom: -420px; }
-
-.compain {
-  margin-bottom: 50px;
-  margin-left: -46px;
-  padding: 40px 45px;
-  border-bottom: 7px solid #858da9;
-  box-shadow: 1px 0px 10px -3px rgba(50, 50, 50, 0.75); }
-  .compain img {
-    margin-right: 50px; }
-    .compain img:last-child {
-      margin-right: 0; }
-
 .ubout-us-inner {
   margin-top: 240px;
-  display: flex; }
+  display: flex;
+  justify-content: space-around; }
   .ubout-us-inner .ubout-business {
-    width: 50%; }
+    width: 49%;
+    margin-top: 50px; }
     .ubout-us-inner .ubout-business h2 {
       font: bold 3.6rem/6rem "Rubik bold", sans-serif;
       color: #082362; }
@@ -274,8 +275,50 @@ main {
           margin-left: 0; }
         .ubout-us-inner .ubout-business .stats div span {
           display: block; }
-  .ubout-us-inner .feedback {
-    width: 50%; }
+          .ubout-us-inner .ubout-business .stats div span:first-child {
+            font: bold 2.4rem/2.6rem "Rubik bold", sans-serif;
+            color: #082362; }
+          .ubout-us-inner .ubout-business .stats div span:last-child {
+            font: 1.6rem/2.6rem;
+            color: #6e6e6e; }
+
+.feedback {
+  width: 49%;
+  background: #082362;
+  padding: 25px 30px;
+  color: #fff; }
+  .feedback h2 {
+    font: bold 3.6rem/6rem "Rubik bold", sans-serif;
+    color: #fff;
+    margin-bottom: 18px; }
+  .feedback input:not([type="submit"]),
+  .feedback textarea {
+    width: 100%;
+    padding: 0 30px;
+    border: none;
+    margin-bottom: 18px;
+    font: 1.4rem/6rem "Rubik", sans-serif;
+    color: #999; }
+  .feedback textarea {
+    resize: none;
+    height: 130px; }
+
+.send {
+  display: inline-block;
+  padding: 18px 65px;
+  margin: 0;
+  font: 500 1.7rem/1.7rem "Rubik Medium", sans-serif;
+  color: #082362;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .send:hover {
+    color: #082362;
+    background-color: #ddd;
+    text-decoration: underline;
+    font-weight: bold;
+    transform: scale(0.9); }
 
 @media screen and (max-width: 1350px) {
   .main-contact {
@@ -307,6 +350,13 @@ main {
     width: 700px; }
     .about-house .compain {
       margin: 0;
-      width: 100%; } }
+      width: 100%; }
+
+  .ubout-us-inner {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0; }
+    .ubout-us-inner .feedback {
+      margin-top: 50px; } }
 
 /*# sourceMappingURL=main.css.map */
